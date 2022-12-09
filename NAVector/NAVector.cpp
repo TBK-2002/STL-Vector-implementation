@@ -200,3 +200,59 @@ std::ostream& operator<<(ostream& out, const NAVector<T>& other){
     }
     return out;
 }
+template<class T>
+bool NAVector<T>::operator==(const NAVector<T>& other){
+    if(this->size==other.size){
+        for(int i=0;i<size;i++){
+            if(arr[i]==other.arr[i]){
+                continue;
+            }
+            else return false;
+        }
+        return true;
+    }
+    else return false;
+}
+template<class T>
+bool NAVector<T>::operator< (const NAVector<T>& other){
+    if(other.size>size){
+        return true;
+    }else if(size==other.size) {
+        for(int j=0;j<size;j++){
+            if(arr[j]<other.arr[j]){
+                return true;
+            }
+             if(arr[j]>other.arr[j]) {
+                return false;
+            }
+             else continue;
+        }
+    }
+}
+template<class T>
+int NAVector<T>::resize() {
+    T* tmp = new T[capacity*2];
+    for(int i = 0; i < capacity; i++){
+        tmp[i] = arr[i];
+    }
+    delete[] arr;
+    arr = tmp;
+    tmp = nullptr;
+    capacity*=2;
+    size++;;
+    return size;
+}
+template<class T>
+bool NAVector<T>::empty(){
+    return size=0;
+}
+
+
+
+
+
+
+
+
+
+

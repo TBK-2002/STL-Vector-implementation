@@ -53,16 +53,15 @@ iterator begin(); // Return an iterator (T*)
 iterator end(); // Return an iterator (T*)
  
 // // Comparison operations
-// bool operator==(const NAVector<T>&) // Return true if ==  
-// bool operator< (const NAVector<T>&) // Compares item by item
+bool operator==(const NAVector<T>&) ;// Return true if ==
+bool operator< (const NAVector<T>&); // Compares item by item
 // // Return true if first different item in this is < in other
  
 // // Capacity operations
 const int sz();    // Return current size of vec
 const int cap(); // Return size of current allocated array  
-// int resize()         // Relocate to bigger space
-// bool empty()         // Return true if size is 0
- 
+int resize();         // Relocate to bigger space
+bool empty();         // Return true if size is 0
 // // Friends
 template<class U>
 friend ostream& operator<< (ostream& out, const NAVector<U> &other);
