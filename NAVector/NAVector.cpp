@@ -239,12 +239,11 @@ int NAVector<T>::resize() {
     arr = tmp;
     tmp = nullptr;
     capacity*=2;
-    size++;;
-    return size;
+    return capacity;
 }
 template<class T>
 bool NAVector<T>::empty(){
-    return size=0;
+    return size==0;
 }
 
 
