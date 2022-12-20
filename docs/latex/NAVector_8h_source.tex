@@ -1,0 +1,77 @@
+\hypertarget{NAVector_8h_source}{}\doxysection{NAVector.\+h}
+\label{NAVector_8h_source}\index{NAVector/NAVector.h@{NAVector/NAVector.h}}
+\mbox{\hyperlink{NAVector_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef \_NAVEC\_}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define \_NAVEC\_}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <bits/stdc++.h>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{template}<\textcolor{keyword}{class} T>}
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{classNAVector}{NAVector}};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{classNAVector}{NAVector}} \{}
+\DoxyCodeLine{25 \textcolor{keyword}{private}:}
+\DoxyCodeLine{26     T* arr;}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} size;}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} capacity;}
+\DoxyCodeLine{29     \textcolor{keyword}{typedef} T* iterator;}
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31 \textcolor{comment}{// Constructors and Big 4}}
+\DoxyCodeLine{32     \mbox{\hyperlink{classNAVector_a04394e78ab9f81976baa1b7016484bb7}{NAVector}} (\textcolor{keywordtype}{int} n); \textcolor{comment}{// Initialize by specific capacity}}
+\DoxyCodeLine{33 \textcolor{comment}{// No content is added, size = 0}}
+\DoxyCodeLine{34 \textcolor{comment}{// Assign a default size value}}
+\DoxyCodeLine{35     \textcolor{keyword}{template}<\textcolor{keyword}{class} U>}
+\DoxyCodeLine{36     \mbox{\hyperlink{classNAVector_a04394e78ab9f81976baa1b7016484bb7}{NAVector}}(U *ark, \textcolor{keywordtype}{int}  n ); \textcolor{comment}{// Initialize by n items from array}}
+\DoxyCodeLine{37     \mbox{\hyperlink{classNAVector_a04394e78ab9f81976baa1b7016484bb7}{NAVector}} (\textcolor{keyword}{const} \mbox{\hyperlink{classNAVector}{NAVector}}\&); \textcolor{comment}{// Initialize with a copy}}
+\DoxyCodeLine{38     \mbox{\hyperlink{classNAVector_a38d5661d0c56e4817234db053d1f5f86}{\string~NAVector}}(); \textcolor{comment}{// Delete allocated memory}}
+\DoxyCodeLine{39     \mbox{\hyperlink{classNAVector}{NAVector<T>}}\& \mbox{\hyperlink{classNAVector_accc19c3f6374c8cc78d8f99d4f9d699d}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classNAVector}{NAVector}}\& other); \textcolor{comment}{// Copy assignment}}
+\DoxyCodeLine{40     \mbox{\hyperlink{classNAVector}{NAVector<T>}}\& \mbox{\hyperlink{classNAVector_accc19c3f6374c8cc78d8f99d4f9d699d}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classNAVector}{NAVector}}\&\& other); \textcolor{comment}{// Move assignment}}
+\DoxyCodeLine{41  }
+\DoxyCodeLine{42 \textcolor{comment}{// // Access operations}}
+\DoxyCodeLine{43     T\& \mbox{\hyperlink{classNAVector_adb633b0ec0ac75a128cd72d414da60d3}{operator[]}}(\textcolor{keywordtype}{int} l); \textcolor{comment}{// Access item by reference}}
+\DoxyCodeLine{44 \textcolor{comment}{// // Throw an exception if out of range  }}
+\DoxyCodeLine{45  }
+\DoxyCodeLine{46 \textcolor{comment}{// // Modifying operations}}
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} \mbox{\hyperlink{classNAVector_adaa88ed90b4a62dda6c23cd0569c3a5a}{push\_back}}(T element); \textcolor{comment}{// Add item to end of vec \& return \# of items}}
+\DoxyCodeLine{48 \textcolor{comment}{//   // Increase capacity of needed}}
+\DoxyCodeLine{49     T \mbox{\hyperlink{classNAVector_a94804077b43cdd5cb73a48654a716200}{pop\_back}}();   \textcolor{comment}{// Remove and return last element in vec}}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{classNAVector_a7415de1ad6c95ca89473d33be845303b}{erase}}(iterator it);    \textcolor{comment}{// Remove item at iterator}}
+\DoxyCodeLine{51 \textcolor{comment}{// // Throw exception if invalid iter}}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{classNAVector_a7415de1ad6c95ca89473d33be845303b}{erase}}(iterator t1, iterator it2);\textcolor{comment}{// Remove items between}}
+\DoxyCodeLine{53 \textcolor{comment}{// // iterator 1 <= iterator 2 otherwise do nothing}}
+\DoxyCodeLine{54 \textcolor{comment}{// // Throw exception if any iterator outside range}}
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{classNAVector_ac29eddc06c3c5fd99253baaad77dbb58}{clear}}();     \textcolor{comment}{// Delete all vector content}}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{classNAVector_a4af206c93c85e2dc503aa9b3c8d1b8f8}{insert}}(iterator it, T element);      \textcolor{comment}{// Insert item at iterator}}
+\DoxyCodeLine{57 \textcolor{comment}{//   // Throw exception if invalid}}
+\DoxyCodeLine{58  }
+\DoxyCodeLine{59 \textcolor{comment}{// // Iterators // Supports *, + and ++ operations at least}}
+\DoxyCodeLine{60 \textcolor{comment}{// // Can use: typedef T* iterator}}
+\DoxyCodeLine{61 \textcolor{comment}{// // Or u can use std::iterator so you can}}
+\DoxyCodeLine{62 \textcolor{comment}{// // apply STL algorithms on NAVector}}
+\DoxyCodeLine{63 iterator \mbox{\hyperlink{classNAVector_a0c1d365ce9d6c05aff0043f4f1190692}{begin}}(); \textcolor{comment}{// Return an iterator (T*)}}
+\DoxyCodeLine{64 iterator \mbox{\hyperlink{classNAVector_ac66522bae17124cf4d9bf4ba36dfaad3}{end}}(); \textcolor{comment}{// Return an iterator (T*)}}
+\DoxyCodeLine{65  }
+\DoxyCodeLine{66 \textcolor{comment}{// // Comparison operations}}
+\DoxyCodeLine{67 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classNAVector_ade1e6df18f8ce26705ec9ba2c16354ed}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classNAVector}{NAVector<T>}}\&) ;\textcolor{comment}{// Return true if ==}}
+\DoxyCodeLine{68 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classNAVector_a885ba5e4f49ebf68d2ffacd24e9030b9}{operator< }}(\textcolor{keyword}{const} \mbox{\hyperlink{classNAVector}{NAVector<T>}}\&); \textcolor{comment}{// Compares item by item}}
+\DoxyCodeLine{69 \textcolor{comment}{// // Return true if first different item in this is < in other}}
+\DoxyCodeLine{70  }
+\DoxyCodeLine{71 \textcolor{comment}{// // Capacity operations}}
+\DoxyCodeLine{72 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classNAVector_a6460825b9c88c143cc519e34c81de2b2}{sz}}();    \textcolor{comment}{// Return current size of vec}}
+\DoxyCodeLine{73 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classNAVector_a7071c5941d36bf1567a51a9cb5372878}{cap}}(); \textcolor{comment}{// Return size of current allocated array  }}
+\DoxyCodeLine{74 \textcolor{keywordtype}{int} \mbox{\hyperlink{classNAVector_aadd8052cbda0da0e0f2d969237fe8436}{resize}}();         \textcolor{comment}{// Relocate to bigger space}}
+\DoxyCodeLine{75 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classNAVector_a58e3c3f671c9c4d2445e49709a347409}{empty}}();         \textcolor{comment}{// Return true if size is 0}}
+\DoxyCodeLine{76 \textcolor{comment}{// // Friends}}
+\DoxyCodeLine{77 \textcolor{keyword}{template}<\textcolor{keyword}{class} U>}
+\DoxyCodeLine{78 \textcolor{keyword}{friend} ostream\& operator<< (ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{classNAVector}{NAVector<U>}} \&other);}
+\DoxyCodeLine{79 \};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

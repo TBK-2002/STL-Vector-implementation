@@ -1,0 +1,515 @@
+\hypertarget{classNAVector}{}\doxysection{NAVector\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classNAVector}\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNAVector_a04394e78ab9f81976baa1b7016484bb7}{NAVector}} (int n)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classNAVector}{NAVector}} object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\\mbox{\hyperlink{classNAVector_a130215f8c88c2b602a6318339a11ddf1}{NAVector}} (U $\ast$ark, int n)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classNAVector}{NAVector}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNAVector_a8b5fca43ee352506852d567b95a010cd}{NAVector}} (const \mbox{\hyperlink{classNAVector}{NAVector}} \&)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classNAVector}{NAVector}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNAVector_a38d5661d0c56e4817234db053d1f5f86}{$\sim$\+NAVector}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classNAVector}{NAVector}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$ \& \mbox{\hyperlink{classNAVector_accc19c3f6374c8cc78d8f99d4f9d699d}{operator=}} (const \mbox{\hyperlink{classNAVector}{NAVector}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$ \& \mbox{\hyperlink{classNAVector_a292a5a03ad05acbcbc9b7a505bb9943f}{operator=}} (const \mbox{\hyperlink{classNAVector}{NAVector}} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classNAVector_adb633b0ec0ac75a128cd72d414da60d3}{operator\mbox{[}$\,$\mbox{]}}} (int l)
+\begin{DoxyCompactList}\small\item\em Acess the element of the vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNAVector_adaa88ed90b4a62dda6c23cd0569c3a5a}{push\+\_\+back}} (T element)
+\begin{DoxyCompactList}\small\item\em add an element to the end of the vector \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classNAVector_a94804077b43cdd5cb73a48654a716200}{pop\+\_\+back}} ()
+\begin{DoxyCompactList}\small\item\em remove the last element of the vector \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNAVector_a7415de1ad6c95ca89473d33be845303b}{erase}} (iterator it)
+\begin{DoxyCompactList}\small\item\em erase an element from the vector \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNAVector_abe2c10d9723a3dc68bd2449d95495605}{erase}} (iterator t1, iterator it2)
+\begin{DoxyCompactList}\small\item\em erase a range of elements from the vector \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNAVector_ac29eddc06c3c5fd99253baaad77dbb58}{clear}} ()
+\begin{DoxyCompactList}\small\item\em clear the vector \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNAVector_a4af206c93c85e2dc503aa9b3c8d1b8f8}{insert}} (iterator it, T element)
+\begin{DoxyCompactList}\small\item\em insert an element to the vector \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classNAVector_a0c1d365ce9d6c05aff0043f4f1190692}{begin}} ()
+\begin{DoxyCompactList}\small\item\em return iterator to the first element of the vector \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classNAVector_ac66522bae17124cf4d9bf4ba36dfaad3}{end}} ()
+\begin{DoxyCompactList}\small\item\em return iterator to the last element of the vector \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classNAVector_ade1e6df18f8ce26705ec9ba2c16354ed}{operator==}} (const \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$ \&)
+\begin{DoxyCompactList}\small\item\em overload the operator == to compare two vectors \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classNAVector_a885ba5e4f49ebf68d2ffacd24e9030b9}{operator$<$}} (const \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$ \&)
+\begin{DoxyCompactList}\small\item\em overlao the operator \texorpdfstring{$<$}{<} to compare two vectors \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classNAVector_a6460825b9c88c143cc519e34c81de2b2}{sz}} ()
+\begin{DoxyCompactList}\small\item\em return the size of the vector \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classNAVector_a7071c5941d36bf1567a51a9cb5372878}{cap}} ()
+\begin{DoxyCompactList}\small\item\em return the capacity of the vector \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNAVector_aadd8052cbda0da0e0f2d969237fe8436}{resize}} ()
+\begin{DoxyCompactList}\small\item\em resize the vector \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classNAVector_a58e3c3f671c9c4d2445e49709a347409}{empty}} ()
+\begin{DoxyCompactList}\small\item\em check if the vector is empty \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNAVector_aca90e5128c222de5bdd8500f3d53d50e}\label{classNAVector_aca90e5128c222de5bdd8500f3d53d50e}} 
+{\footnotesize template$<$class U $>$ }\\ostream \& {\bfseries operator$<$$<$} (ostream \&out, const \mbox{\hyperlink{classNAVector}{NAVector}}$<$ U $>$ \&other)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNAVector_a04394e78ab9f81976baa1b7016484bb7}\label{classNAVector_a04394e78ab9f81976baa1b7016484bb7}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!NAVector@{NAVector}}
+\index{NAVector@{NAVector}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{NAVector()}{NAVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\mbox{\hyperlink{classNAVector}{\+::\+NAVector}} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classNAVector}{NAVector}} object. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the size of the vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNAVector_a130215f8c88c2b602a6318339a11ddf1}\label{classNAVector_a130215f8c88c2b602a6318339a11ddf1}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!NAVector@{NAVector}}
+\index{NAVector@{NAVector}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{NAVector()}{NAVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template$<$class U $>$ \\
+\mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\mbox{\hyperlink{classNAVector}{\+::\+NAVector}} (\begin{DoxyParamCaption}\item[{U $\ast$}]{ark,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classNAVector}{NAVector}} object. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+{\em U} & the type of the array which is supposed to be from the same type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em ark} & the array \\
+\hline
+{\em n} & the size of the array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNAVector_a8b5fca43ee352506852d567b95a010cd}\label{classNAVector_a8b5fca43ee352506852d567b95a010cd}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!NAVector@{NAVector}}
+\index{NAVector@{NAVector}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{NAVector()}{NAVector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\mbox{\hyperlink{classNAVector}{\+::\+NAVector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classNAVector}{NAVector}} object. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the vector which is supposed to be copied \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNAVector_a38d5661d0c56e4817234db053d1f5f86}\label{classNAVector_a38d5661d0c56e4817234db053d1f5f86}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!````~NAVector@{$\sim$NAVector}}
+\index{````~NAVector@{$\sim$NAVector}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$NAVector()}{~NAVector()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classNAVector}{NAVector}}}
+
+
+
+Destroy the \mbox{\hyperlink{classNAVector}{NAVector}} object. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNAVector_a0c1d365ce9d6c05aff0043f4f1190692}\label{classNAVector_a0c1d365ce9d6c05aff0043f4f1190692}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T $\ast$ \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::begin}
+
+
+
+return iterator to the first element of the vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T$\ast$ the iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNAVector_a7071c5941d36bf1567a51a9cb5372878}\label{classNAVector_a7071c5941d36bf1567a51a9cb5372878}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!cap@{cap}}
+\index{cap@{cap}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cap()}{cap()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const int \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::cap}
+
+
+
+return the capacity of the vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+const int the capacity of the vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNAVector_ac29eddc06c3c5fd99253baaad77dbb58}\label{classNAVector_ac29eddc06c3c5fd99253baaad77dbb58}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::clear}
+
+
+
+clear the vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of the vector \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classNAVector_a58e3c3f671c9c4d2445e49709a347409}\label{classNAVector_a58e3c3f671c9c4d2445e49709a347409}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::empty}
+
+
+
+check if the vector is empty 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+true if the vector is empty 
+
+false if the vector is not empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNAVector_ac66522bae17124cf4d9bf4ba36dfaad3}\label{classNAVector_ac66522bae17124cf4d9bf4ba36dfaad3}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!end@{end}}
+\index{end@{end}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T $\ast$ \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::end}
+
+
+
+return iterator to the last element of the vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T$\ast$ the iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNAVector_a7415de1ad6c95ca89473d33be845303b}\label{classNAVector_a7415de1ad6c95ca89473d33be845303b}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!erase@{erase}}
+\index{erase@{erase}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{iterator}]{it }\end{DoxyParamCaption})}
+
+
+
+erase an element from the vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of the vector \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em it} & iterator of the element to be erased \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNAVector_abe2c10d9723a3dc68bd2449d95495605}\label{classNAVector_abe2c10d9723a3dc68bd2449d95495605}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!erase@{erase}}
+\index{erase@{erase}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{iterator}]{it1,  }\item[{iterator}]{it2 }\end{DoxyParamCaption})}
+
+
+
+erase a range of elements from the vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of the vector \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em it1} & iterator of the first element to be erased \\
+\hline
+{\em it2} & iterator of the last element to be erased \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNAVector_a4af206c93c85e2dc503aa9b3c8d1b8f8}\label{classNAVector_a4af206c93c85e2dc503aa9b3c8d1b8f8}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{iterator}]{it,  }\item[{T}]{element }\end{DoxyParamCaption})}
+
+
+
+insert an element to the vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of the vector \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em it} & iterator of the element to be inserted \\
+\hline
+{\em element} & element to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNAVector_a885ba5e4f49ebf68d2ffacd24e9030b9}\label{classNAVector_a885ba5e4f49ebf68d2ffacd24e9030b9}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+overlao the operator \texorpdfstring{$<$}{<} to compare two vectors 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the vector to be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true return true if the vector is smaller than the other vector 
+
+false return false if the vector is not smaller than the other vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNAVector_a292a5a03ad05acbcbc9b7a505bb9943f}\label{classNAVector_a292a5a03ad05acbcbc9b7a505bb9943f}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$ \& \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$ \&\&}]{other }\end{DoxyParamCaption})}
+
+
+
+Move assignment. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the vector which is supposed to be moved \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NAVector$<$\+T$>$\& the vector which is moved 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNAVector_accc19c3f6374c8cc78d8f99d4f9d699d}\label{classNAVector_accc19c3f6374c8cc78d8f99d4f9d699d}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$ \& \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy assignment. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the vector which is supposed to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NAVector$<$\+T$>$\& the vector which is copied 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNAVector_ade1e6df18f8ce26705ec9ba2c16354ed}\label{classNAVector_ade1e6df18f8ce26705ec9ba2c16354ed}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+overload the operator == to compare two vectors 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the vector to be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the vectors are equal 
+
+false if the vectors are not equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNAVector_adb633b0ec0ac75a128cd72d414da60d3}\label{classNAVector_adb633b0ec0ac75a128cd72d414da60d3}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \& \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{l }\end{DoxyParamCaption})}
+
+
+
+Acess the element of the vector. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em l} & the index of the element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\& the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNAVector_a94804077b43cdd5cb73a48654a716200}\label{classNAVector_a94804077b43cdd5cb73a48654a716200}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::pop\+\_\+back}
+
+
+
+remove the last element of the vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of the vector \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T the last element of the vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNAVector_adaa88ed90b4a62dda6c23cd0569c3a5a}\label{classNAVector_adaa88ed90b4a62dda6c23cd0569c3a5a}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{T}]{element }\end{DoxyParamCaption})}
+
+
+
+add an element to the end of the vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of the vector \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em element} & element to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int the size of the vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNAVector_aadd8052cbda0da0e0f2d969237fe8436}\label{classNAVector_aadd8052cbda0da0e0f2d969237fe8436}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!resize@{resize}}
+\index{resize@{resize}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::resize}
+
+
+
+resize the vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+int the new capacity of the vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNAVector_a6460825b9c88c143cc519e34c81de2b2}\label{classNAVector_a6460825b9c88c143cc519e34c81de2b2}} 
+\index{NAVector$<$ T $>$@{NAVector$<$ T $>$}!sz@{sz}}
+\index{sz@{sz}!NAVector$<$ T $>$@{NAVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sz()}{sz()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const int \mbox{\hyperlink{classNAVector}{NAVector}}$<$ T $>$\+::sz}
+
+
+
+return the size of the vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of the vector \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+const int the size of the vector 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+NAVector/\mbox{\hyperlink{NAVector_8h}{NAVector.\+h}}\item 
+NAVector/\mbox{\hyperlink{NAVector_8cpp}{NAVector.\+cpp}}\end{DoxyCompactItemize}

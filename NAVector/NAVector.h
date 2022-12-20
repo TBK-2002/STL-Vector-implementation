@@ -1,3 +1,14 @@
+/**
+ * @file NAVector.h
+ * @author Nour El-din and Tolba (nour.sehs.3@gmail.com)
+ * @brief  This is the header file for the NAVector class which is a vector class that is implemented using an array.
+ * @version 0.1
+ * @date 2022-12-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #ifndef _NAVEC_
 #define _NAVEC_
 

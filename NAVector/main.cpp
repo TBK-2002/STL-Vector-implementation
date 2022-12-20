@@ -1,8 +1,25 @@
+/**
+ * @file main.cpp
+ * @author Nour El-din and Tolba (nour.sehs.3@gmail.com)
+ * @brief the main file for the NAVector class which is a vector class that is implemented using an array.
+ * @version 0.1
+ * @date 2022-12-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include <iostream>
 #include "NAVector.h"
 #include "NAVector.cpp"
 
 using namespace std;
+
+/**
+ * @brief the main function
+ * 
+ * @return int returns 0 if the program runs successfully
+ */
 
 int main(){
     int arr[] = {1, 2, 3};

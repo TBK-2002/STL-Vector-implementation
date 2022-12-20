@@ -1,8 +1,26 @@
+/**
+ * @file NAVector.cpp
+ * @author Nour El-din and Tolba (nour.sehs.3@gmail.com)
+ * @brief this is the implementation file for the NAVector class which is a vector class that is implemented using an array.
+ * @version 0.1
+ * @date 2022-12-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include "NAVector.h"
 #include <iostream>
 #include <bits/stdc++.h>
 
 using namespace std;
+
+/**
+ * @brief Construct a new NAVector object
+ * 
+ * @tparam T the type of the vector
+ * @param n the size of the vector
+ */
 
 template <class T>
 NAVector<T>::NAVector(int n)
@@ -11,6 +29,15 @@ NAVector<T>::NAVector(int n)
     size = 0;
     arr = new T(capacity);
 }
+
+/**
+ * @brief Construct a new NAVector object
+ * 
+ * @tparam T the type of the vector
+ * @tparam U the type of the array which is supposed to be from the same type
+ * @param ark the array
+ * @param n the size of the array
+ */
 
 template <class T>
 template <class U>
@@ -25,6 +52,13 @@ NAVector<T>::NAVector(U *ark, int n)
     }
 }
 
+/**
+ * @brief Construct a new NAVector object
+ * 
+ * @tparam T the type of the vector
+ * @param other the vector which is supposed to be copied
+ */
+
 template <class T>
 NAVector<T>::NAVector(const NAVector &other){
     this->size = other.size;
@@ -35,12 +69,26 @@ NAVector<T>::NAVector(const NAVector &other){
     }
 };
 
+/**
+ * @brief Destroy the NAVector object
+ * 
+ * @tparam T the type of the vector
+ */
+
 template<class T>
 NAVector<T>::~NAVector(){
     if(arr != nullptr){
         delete[] arr;
     }
 }
+
+/**
+ * @brief Copy assignment
+ * 
+ * @tparam T the type of the vector
+ * @param other the vector which is supposed to be copied
+ * @return NAVector<T>& the vector which is copied
+ */
 
 template<class T>
 NAVector<T>& NAVector<T>::operator=(const NAVector& other){
@@ -53,6 +101,14 @@ NAVector<T>& NAVector<T>::operator=(const NAVector& other){
     }
 }
 
+/**
+ * @brief Move assignment
+ * 
+ * @tparam T the type of the vector
+ * @param other the vector which is supposed to be moved
+ * @return NAVector<T>& the vector which is moved
+ */
+
 template<class T>
 NAVector<T>& NAVector<T>::operator=(const NAVector&& other){
     this->size = other.size;
@@ -61,6 +117,14 @@ NAVector<T>& NAVector<T>::operator=(const NAVector&& other){
     this->arr = other.arr;
     other.arr = nullptr;
 }
+
+/**
+ * @brief Acess the element of the vector
+ * 
+ * @tparam T the type of the vector
+ * @param l the index of the element
+ * @return int& the element
+ */
 
 template<class T>
 T& NAVector<T>::operator[](int l){
@@ -74,6 +138,14 @@ T& NAVector<T>::operator[](int l){
         cout << "Out of range\n";
     }
 }
+
+/**
+ * @brief add an element to the end of the vector
+ * 
+ * @tparam T type of the vector
+ * @param element element to be added
+ * @return int the size of the vector
+ */
 
 template<class T>
 int NAVector<T>::push_back(T element){
@@ -97,11 +169,25 @@ int NAVector<T>::push_back(T element){
     }
 }
 
+/**
+ * @brief remove the last element of the vector
+ * 
+ * @tparam T type of the vector
+ * @return T the last element of the vector
+ */
+
 template<class T>
 T NAVector<T>::pop_back(){
     size--;
     return arr[size-1];
 }
+
+/**
+ * @brief erase an element from the vector
+ * 
+ * @tparam T type of the vector
+ * @param it iterator of the element to be erased
+ */
 
 template<class T>
 void NAVector<T>::erase(iterator it){
@@ -118,6 +204,14 @@ void NAVector<T>::erase(iterator it){
         cout << "Out of range\n";
     }
 }
+
+/**
+ * @brief erase a range of elements from the vector
+ * 
+ * @tparam T type of the vector
+ * @param it1 iterator of the first element to be erased
+ * @param it2 iterator of the last element to be erased
+ */
 
 template<class T>
 void NAVector<T>::erase(iterator it1, iterator it2){
@@ -139,11 +233,24 @@ void NAVector<T>::erase(iterator it1, iterator it2){
     }
 }
 
+/**
+ * @brief clear the vector
+ * 
+ * @tparam T type of the vector
+ */
 
 template<class T>
 void NAVector<T>::clear(){
     size = 0;;
 }
+
+/**
+ * @brief insert an element to the vector
+ * 
+ * @tparam T type of the vector
+ * @param it iterator of the element to be inserted
+ * @param element element to be inserted
+ */
 
 template<class T>
 void NAVector<T>::insert(iterator it, T element){
@@ -179,11 +286,25 @@ void NAVector<T>::insert(iterator it, T element){
     }
 }
 
+/**
+ * @brief return iterator to the first element of the vector
+ * 
+ * @tparam T the type of the vector
+ * @return T* the iterator
+ */
+
 
 template<class T>
 T* NAVector<T>::begin(){
     return arr;
 }
+
+/**
+ * @brief return iterator to the last element of the vector
+ * 
+ * @tparam T the type of the vector
+ * @return T* the iterator
+ */
 
 template<class T>
 T* NAVector<T>::end(){
@@ -193,7 +314,12 @@ T* NAVector<T>::end(){
 // Comparison operations
 
 
-
+/**
+ * @brief return the size of the vector
+ * 
+ * @tparam T the type of the vector
+ * @return const int  the size of the vector
+ */
 
 template <class T>
 const int NAVector<T>::sz()
@@ -201,11 +327,27 @@ const int NAVector<T>::sz()
     return size;
 }
 
+/**
+ * @brief return the capacity of the vector
+ * 
+ * @tparam T the type of the vector
+ * @return const int  the capacity of the vector
+ */
+
 template <class T>
 const int NAVector<T>::cap()
 {
     return capacity;
 }
+
+/**
+ * @brief overload the operator << to print the vector
+ * 
+ * @tparam T the type of the vector
+ * @param out the output stream
+ * @param other the vector to be printed
+ * @return std::ostream& the output stream
+ */
 
 template<class T>
 std::ostream& operator<<(ostream& out, const NAVector<T>& other){
@@ -214,6 +356,16 @@ std::ostream& operator<<(ostream& out, const NAVector<T>& other){
     }
     return out;
 }
+
+/**
+ * @brief overload the operator == to compare two vectors
+ * 
+ * @tparam T the type of the vector
+ * @param other the vector to be compared
+ * @return true if the vectors are equal
+ * @return false if the vectors are not equal
+ */
+
 template<class T>
 bool NAVector<T>::operator==(const NAVector<T>& other){
     if(this->size==other.size){
@@ -227,6 +379,16 @@ bool NAVector<T>::operator==(const NAVector<T>& other){
     }
     else return false;
 }
+
+/**
+ * @brief overlao the operator < to compare two vectors
+ * 
+ * @tparam T the type of the vector
+ * @param other the vector to be compared
+ * @return true return true if the vector is smaller than the other vector
+ * @return false return false if the vector is not smaller than the other vector
+ */
+
 template<class T>
 bool NAVector<T>::operator< (const NAVector<T>& other){
     if(other.size>size){
@@ -243,6 +405,14 @@ bool NAVector<T>::operator< (const NAVector<T>& other){
         }
     }
 }
+
+/**
+ * @brief resize the vector
+ * 
+ * @tparam T the type of the vector
+ * @return int the new capacity of the vector
+ */
+
 template<class T>
 int NAVector<T>::resize() {
     T* tmp = new T[capacity*2];
@@ -255,6 +425,15 @@ int NAVector<T>::resize() {
     capacity*=2;
     return capacity;
 }
+
+/**
+ * @brief check if the vector is empty
+ * 
+ * @tparam T the type of the vector
+ * @return true if the vector is empty
+ * @return false if the vector is not empty
+ */
+
 template<class T>
 bool NAVector<T>::empty(){
     return size==0;
