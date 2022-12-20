@@ -121,8 +121,22 @@ void NAVector<T>::erase(iterator it){
 
 template<class T>
 void NAVector<T>::erase(iterator it1, iterator it2){
-    // Implement de ya tolba hat8ayr 7aga wa7da bas fel loop el fatet
-    // w bos 3ala el comments el makotba 3an el function de fe header file
+    if(it1 > it2){
+        return;
+    }
+    try{
+        if(it1 < begin() || it1 > end() || it2 < begin() || it2 > end()){
+            throw out_of_range("Out of range");
+        }
+        int diff = it2-it1;
+        for(iterator i = it1; i < it2; i++){
+            *i = *(i+diff);
+        }
+        size-= diff;
+    }
+    catch(exception& ex){
+        cout << "Out of range\n";
+    }
 }
 
 
